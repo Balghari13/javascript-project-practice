@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Divider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<main>
+  <div class="bill-input">
+    <p>Bill</p>
+    <div class="input-container">
+      <span>Rs</span>
+      <input type="number" >
+    </div>
+    <p>Select Tip</p>
+    <div class="tip-container">
+        <div class="tip">5%</div>
+        <div class="tip">10%</div>
+        <div class="tip">15%</div>
+        <div class="tip">25%</div>
+        <div class="tip">50%</div>
+        <div class="tip">75%</div>
+    </div>
+   
+      <input class="custom-input gray-input" type="number" placeholder="Custom Tip">
+<p>People</p>
+      <input class="people-input gray-input" type="number" placeholder="Number of People">
+   <button class="generate-bill">Generate Bill</button>
+  </div>
+
+  <div class="bill-output">
+    <p class="tip-amount">Tip Amount <span>Rs.120</span></p>
+    <p class="total">Total <span>Rs.120</span></p>
+    <p class="each-person-bill">Each Person Bill <span>Rs.120</span></p>
+
+    <button class="reset-btn">Reset</button>
+  </div>
+  
+</main>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
