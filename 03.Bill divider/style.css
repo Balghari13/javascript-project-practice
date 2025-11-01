@@ -11,10 +11,11 @@ body{
 main{
   max-width: 700px;
   margin: 0 auto;
+  padding: 32px;
   display: flex;
   align-items: center;
   /* justify-content: center;  */
-  margin-top: 32px;
+  /* margin-top: 32px; */
   gap: 20px;
 }
 main>div{
@@ -55,9 +56,17 @@ input::-webkit-inner-spin-button {
 }
 .tip-container{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(70px,1fr));
   gap: 15px;
   margin-bottom: 12px;
+}
+.tip-container.disable{
+  opacity: 0.6;
+/* pointer-events: none; */
+
+}
+.tip-container.disable .tip{
+  cursor: not-allowed;
 }
 .tip-container .tip{
   background-color: #93389f;
@@ -67,6 +76,9 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   cursor: pointer;
 
+}
+.tip.selected{
+  outline: 4px yellow solid;
 }
 .gray-input{
   width: 100%;
@@ -89,6 +101,12 @@ input::-webkit-inner-spin-button {
   font-size: inherit;
   border-radius: 5px;
   cursor: pointer;
+}
+.generate-bill:disabled{
+  opacity: 0.6;
+}
+button:disabled,input:disabled{
+  cursor: not-allowed;
 }
 
 .bill-output{
@@ -117,5 +135,12 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   width: 100%;
   border-radius: 5px;
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
+}
+
+@media(max-width:550px){
+  main{
+    display: flex;
+    flex-direction: column;
+  }
 }
