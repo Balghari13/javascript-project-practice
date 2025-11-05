@@ -10,6 +10,7 @@ const tld= document.querySelector('.tld')
 const currency= document.querySelector('.currency')
 const language= document.querySelector('.language')
 const borderCountries= document.querySelector('.border-countries')
+ const darkMode = document.querySelector('.dark-mode')
 
 fetch(`https://restcountries.com/v3.1/name/${countryNames}?fullText=true`)
 .then((res)=>res.json())
@@ -63,4 +64,14 @@ if(country.borders){
   })
 }
 
+})
+
+darkMode.addEventListener('click',()=>{
+  document.body.classList.toggle('dark')
+
+   if(document.body.classList.contains('dark')){
+    darkMode.innerHTML = '<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode'
+  }else{
+    darkMode.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode`
+  }
 })

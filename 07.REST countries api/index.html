@@ -11,17 +11,32 @@
 <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body >
   <header class="header">
     <div class="header-content">
-<h3 class="title">Where in the world?</h3>
-    <p>
+<h3 class="title"><a href="/07.REST countries api/index.html">Where in the world?</a></h3>
+    <p class="dark-mode">
       <i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode
     </p>
     </div>
     
   </header>
   <main>
+      <div class="search-filter-container">
+        <div class="search-container">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" placeholder="search by name">
+        </div>
+
+        <select class="filter-region">
+          <option hidden>Filter by region</option>
+        <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+      </div>
       
     <div class="countries-card">
     </div>

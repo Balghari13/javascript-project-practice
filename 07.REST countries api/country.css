@@ -1,3 +1,5 @@
+
+
 .country-details-container{
   max-width: 1200px;
   margin: 0 auto;
@@ -9,6 +11,7 @@
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  background-color: var(--element-color);
 }
 .country-details{
   display: flex;
@@ -19,7 +22,7 @@
 
 .country-details img{
   width: 40%;
-
+ border: 1px solid rgb(209, 207, 207);
 }
 
 .details-text{
@@ -39,12 +42,14 @@ column-gap: 40px;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+ 
 }
 .border-countries a{
  padding: 3px 8px;
  margin-inline: 5px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+    background-color: var(--element-color);
 }
 
 
