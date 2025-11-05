@@ -1,4 +1,4 @@
-console.log("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital");
+// console.log("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital");
 
 
  const countriesCard = document.querySelector('.countries-card')
@@ -9,8 +9,11 @@ console.log("https://restcountries.com/v3.1/all?fields=name,flags,population,reg
  .then((res)=>res.json())
  .then((data)=>{
   data.forEach((country)=>{
+   
+    
     const countryCard = document.createElement('a');
     countryCard.classList.add('country-card')
+     countryCard.href = `country.html?name=${country.name.common}`;
     countryCard.innerHTML = `
      <img src=${country.flags.svg} alt="flag">
     <div class="card-text">
@@ -23,3 +26,4 @@ console.log("https://restcountries.com/v3.1/all?fields=name,flags,population,reg
     countriesCard.append(countryCard)
   })
  })
+
