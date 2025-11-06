@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+  gap: 15px;
+}
+
+select{
+  padding:5px 15px;
+}
+input[type="text"]{
+  padding: 5px;
+}
+button{
+  cursor: pointer;
+}
+.duration-c{
+  display: flex;
+  align-items: center;
+}
+.toast-container{
+  position: absolute;
+  top: 1rem;
+  left:0rem;
+  overflow: hidden;
+  padding: 0 10px;
+}
+.toast-container.right{
+  position: absolute;
+  top: 1rem;
+  right: 0rem;
+  left: auto;
+}
+.toast-container.bottom{
+  position: absolute;
+  bottom: 1rem;
+  top: auto;
+  
+}
+.toast{
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  animation: fromLeft 0.1s ease-in;
+}
+.toast-container.right .toast{
+  animation: fromRight 0.1s ease-in;
+}
+.toast.toLeft{
+  animation: toLeft 0.1s ease-in forwards;
+}
+.toast-container.right .toast.toRight{
+  animation: toRight 0.1s ease-in forwards;
+}
+@keyframes fromLeft {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes toLeft {
+  0%{
+    transform: translateX(0);;
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+@keyframes fromRight {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes toRight {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+.toast span:hover{ 
+cursor: pointer;
+}
+.toast + .toast{
+  margin-top: 8px;
+}
+.success{
+  background-color: green;
+}
+.info{
+  background-color: palevioletred;
+}
+.error{
+  background-color: red;
+}
+.warning{
+  background-color: rgb(186, 78, 11);
+}
+.toast.success::before{
+  content:'✓ ';
+}
+.toast.error::before{
+  content:  '✕ '
+}
+.toast.info::before{
+  content: 'ⓘ ';
+}
+.toast.warning::before{
+  content: '⚠️ ';
+}
