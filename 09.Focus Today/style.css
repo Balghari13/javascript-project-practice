@@ -43,25 +43,31 @@ main{
   background-color: rgb(204, 250, 204);
   height: 30px;
   border-radius: 15px;
-
+  margin-bottom: 24px;
 }
 .progress-value{
    background-color: green;
   height: 100%;
   border-radius: 15px;
-    width: 33%;
+    width: 0;
     color: white;
     font-weight: 500;
     font-size: 10px;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   display: flex;
   align-items: center;
+  /* visibility: hidden; */
+  overflow: hidden;
+}
+.progress-value span{
+  padding-left: 10px;
 }
 
 .error-label{
   color: red;
   font-size: 10px;
   margin-block: 20px;
+   display: none;
 }
 
 .goal-container{
